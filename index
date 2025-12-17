@@ -1,182 +1,196 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <title>Protocolo Clínico – Gonartrose de Joelho</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>Prontuário Digital – Gonartrose</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen;
-      background: #f9f9f9;
-      color: #222;
-      line-height: 1.6;
-      margin: 0;
-      padding: 0;
-    }
+<style>
+:root {
+  --primary: #0f3d3e;
+  --secondary: #e6f2f2;
+  --accent: #2fa4a9;
+}
 
-    header {
-      background: #111;
-      color: #fff;
-      padding: 32px 20px;
-      text-align: center;
-    }
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  background: #f5f7f7;
+  color: #222;
+}
 
-    header h1 {
-      margin: 0;
-      font-size: 28px;
-    }
+header {
+  background: var(--primary);
+  color: white;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
 
-    header p {
-      margin-top: 8px;
-      opacity: 0.8;
-    }
+header img {
+  height: 50px;
+}
 
-    main {
-      max-width: 900px;
-      margin: auto;
-      padding: 32px 20px;
-    }
+header h1 {
+  margin: 0;
+  font-size: 22px;
+}
 
-    section {
-      background: #fff;
-      padding: 24px;
-      margin-bottom: 24px;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-    }
+main {
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+}
 
-    h2 {
-      margin-top: 0;
-      border-bottom: 2px solid #eee;
-      padding-bottom: 6px;
-      font-size: 22px;
-    }
+section {
+  background: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
 
-    ul {
-      padding-left: 20px;
-    }
+h2 {
+  margin-top: 0;
+  color: var(--primary);
+  border-bottom: 2px solid var(--secondary);
+  padding-bottom: 5px;
+}
 
-    li {
-      margin-bottom: 6px;
-    }
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+}
 
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 16px;
-    }
+label {
+  font-size: 14px;
+  font-weight: bold;
+}
 
-    .box {
-      background: #f3f3f3;
-      padding: 16px;
-      border-radius: 6px;
-    }
+input, textarea, select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 4px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
 
-    footer {
-      text-align: center;
-      font-size: 14px;
-      padding: 20px;
-      color: #666;
-    }
-  </style>
+textarea {
+  resize: vertical;
+}
+
+.checklist label {
+  font-weight: normal;
+}
+
+footer {
+  text-align: center;
+  font-size: 13px;
+  color: #666;
+  padding: 20px;
+}
+</style>
 </head>
 
 <body>
 
 <header>
-  <h1>Protocolo Assistencial – Gonartrose de Joelho</h1>
-  <p>Documento clínico • Uso profissional</p>
+  <!-- SUBSTITUA PELO LOGO DA CLÍNICA -->
+  <img src="logo-clinica.png" alt="Logo da Clínica">
+  <h1>Clínica XXXXX – Prontuário Digital</h1>
 </header>
 
 <main>
 
-  <section>
-    <h2>📋 Dados do Paciente</h2>
-    <div class="grid">
-      <div class="box"><strong>Sexo:</strong> Masculino</div>
-      <div class="box"><strong>Idade:</strong> 62 anos</div>
-      <div class="box"><strong>Diagnóstico:</strong> Gonartrose – Grau 3</div>
-      <div class="box"><strong>IMC:</strong> 32 (Obesidade Grau I)</div>
-      <div class="box"><strong>Dor (EVA):</strong> 6/10</div>
-      <div class="box"><strong>Comorbidade:</strong> HAS</div>
-    </div>
-  </section>
+<section>
+<h2>Identificação do Paciente</h2>
+<div class="grid">
+  <div>
+    <label>Nome</label>
+    <input type="text">
+  </div>
+  <div>
+    <label>Idade</label>
+    <input type="number">
+  </div>
+  <div>
+    <label>Sexo</label>
+    <select>
+      <option>Masculino</option>
+      <option>Feminino</option>
+    </select>
+  </div>
+  <div>
+    <label>IMC</label>
+    <input type="text">
+  </div>
+  <div>
+    <label>Diagnóstico</label>
+    <input value="Gonartrose de Joelho – Grau 3">
+  </div>
+</div>
+</section>
 
-  <section>
-    <h2>🎯 Plano Terapêutico Global</h2>
-    <ul>
-      <li>Redução da dor mecânica</li>
-      <li>Melhora funcional e da marcha</li>
-      <li>Redução da sobrecarga articular</li>
-      <li>Retardo da progressão da gonartrose</li>
-    </ul>
-  </section>
+<section>
+<h2>Avaliação Inicial</h2>
+<div class="grid">
+  <div>
+    <label>Dor (EVA 0–10)</label>
+    <input type="number" min="0" max="10">
+  </div>
+  <div>
+    <label>Derrame Articular</label>
+    <select>
+      <option>Ausente</option>
+      <option>Presente</option>
+    </select>
+  </div>
+  <div>
+    <label>Comorbidades</label>
+    <input value="Hipertensão Arterial Sistêmica">
+  </div>
+</div>
+</section>
 
-  <section>
-    <h2>🧠 Medidas Não Medicamentosas</h2>
-    <ul>
-      <li>Educação terapêutica (doença crônica)</li>
-      <li>Evitar repouso prolongado</li>
-      <li>Exercício como base do tratamento</li>
-      <li>Meta de perda ponderal: 5–10%</li>
-    </ul>
-  </section>
+<section>
+<h2>Plano Terapêutico</h2>
+<textarea rows="4">
+Tratamento conservador intensivo, multimodal, com foco em redução da dor, melhora funcional e retardo da progressão da gonartrose.
+</textarea>
+</section>
 
-  <section>
-    <h2>🏋️ Exercícios Terapêuticos</h2>
+<section>
+<h2>Checklist da Sessão</h2>
+<div class="checklist">
+  <label><input type="checkbox"> EVA registrada</label><br>
+  <label><input type="checkbox"> Exercícios realizados</label><br>
+  <label><input type="checkbox"> Treino de quadríceps</label><br>
+  <label><input type="checkbox"> Treino de glúteos</label><br>
+  <label><input type="checkbox"> Exercício aeróbico</label><br>
+  <label><input type="checkbox"> Laser / US aplicado</label><br>
+  <label><input type="checkbox"> Orientações reforçadas</label>
+</div>
+</section>
 
-    <h3>Fase 1 – Analgesia e Ativação (Semanas 1–3)</h3>
-    <ul>
-      <li>Isometria de quadríceps – 3×10 (6–8s)</li>
-      <li>Elevação de perna estendida – 3×10</li>
-      <li>Abdução de quadril – 3×12</li>
-      <li>Ponte – 3×10</li>
-      <li>Bicicleta ergométrica – 15 min</li>
-    </ul>
+<section>
+<h2>Evolução / Observações</h2>
+<textarea rows="6"></textarea>
+</section>
 
-    <h3>Fase 2 – Recondicionamento (Semanas 4–8)</h3>
-    <ul>
-      <li>Leg press horizontal – 3×10–12</li>
-      <li>Cadeira extensora – carga leve/moderada</li>
-      <li>Agachamento assistido – 3×8</li>
-      <li>Treino excêntrico (ritmo 1:3)</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>🔴 Laserterapia (LLLT)</h2>
-    <ul>
-      <li>Comprimento de onda: 808–904 nm</li>
-      <li>Dose: 4–6 J por ponto</li>
-      <li>4–5 pontos por joelho</li>
-      <li>Frequência: 2–3x/semana</li>
-      <li>Ciclo: 10–12 sessões</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>💊 Terapia Medicamentosa</h2>
-    <ul>
-      <li>Paracetamol se necessário</li>
-      <li>Evitar AINEs contínuos (HAS)</li>
-      <li>Uso pontual na menor dose eficaz</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>✅ Critérios de Alta</h2>
-    <ul>
-      <li>Dor ≤ 3/10 (EVA)</li>
-      <li>Melhora funcional significativa</li>
-      <li>Autonomia para exercícios domiciliares</li>
-    </ul>
-  </section>
+<section>
+<h2>Critérios de Alta</h2>
+<div class="checklist">
+  <label><input type="checkbox"> EVA ≤ 3/10</label><br>
+  <label><input type="checkbox"> Melhora funcional</label><br>
+  <label><input type="checkbox"> Autonomia para exercícios</label>
+</div>
+</section>
 
 </main>
 
 <footer>
-  Protocolo Padronizado da Clínica • Uso Interno
+Documento clínico interno • Clínica XXXXX
 </footer>
 
 </body>
